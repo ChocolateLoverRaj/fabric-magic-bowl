@@ -1,3 +1,4 @@
 {
-  "item.magic_bowl.magic_bowl": "Tazón Magia"
+  "item.magic_bowl.magic_bowl": "Tazón Magia",
+  "item.magic_bowl.magic_bowl.contains": "%d en un %d"
 }

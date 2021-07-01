@@ -1,3 +1,4 @@
 {
-  "item.magic_bowl.magic_bowl": "Magic Bowl"
+  "item.magic_bowl.magic_bowl": "Magic Bowl",
+  "item.magic_bowl.magic_bowl.contains": "%d in a %d"
 }

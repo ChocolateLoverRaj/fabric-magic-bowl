@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "magic_bowl",
-  "version": "${version}",
+  "version": "1.0.0",
   "name": "Example Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
@@ -17,11 +17,11 @@
   "entrypoints": {
     "main": [
       "net.fabricmc.magic_bowl.MagicBowlMod"
+    ],
+    "client": [
+      "net.fabricmc.magic_bowl.MagicBowlModClient"
     ]
   },
-  "mixins": [
-    "magic_bowl.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
