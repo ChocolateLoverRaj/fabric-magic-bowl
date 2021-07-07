@@ -1,7 +1,6 @@
 package net.fabricmc.magic_bowl;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.screen.ScreenHandlerType;
@@ -25,9 +24,7 @@ public class MagicBowlMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		CONFIG.readConfigFromFile();
-		CONFIG.saveConfigToFile();
-		ServerLifecycleEvents.SERVER_STOPPED.register(instance -> CONFIG.saveConfigToFile());
+		CONFIG.load();
 		Registry.register(Registry.ITEM, new Identifier(MOD_NAME, "magic_bowl"), MAGIC_BOWL);
 	}
 }

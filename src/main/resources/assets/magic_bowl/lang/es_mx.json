@@ -1,6 +1,7 @@
 {
   "item.magic_bowl.magic_bowl": "Tazón Magia",
   "item.magic_bowl.magic_bowl.contains": "%d en un %d",
+  "config.magic_bowl.config.foodOnly": "Solo comida",
   "custom.magic_bowl.screens.magic_bowl.errors.bowl_already_filled": "Tazón ya está lleno",
   "custom.magic_bowl.screens.magic_bowl.errors.base_must_be_a_magic_bowl": "Base debe está un %d",
   "custom.magic_bowl.screens.magic_bowl.errors.food_only": "Puedes poner solo comida en el Tazón"

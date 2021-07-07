@@ -17,7 +17,16 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	repositories {
-		mavenCentral()
+		maven {
+        url 'https://jitpack.io'
+    }
+    maven {
+        url "https://maven.shedaniel.me/"
+    }
+    maven {
+        url "https://maven.terraformersmc.com/"
+    }
+
 	}
 }
 
@@ -34,8 +43,7 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 
 	// https://github.com/OroArmor/Oro-Config
-	modImplementation 'com.oroarmor:oro-config-common:3.1.0'
-  include 'com.oroarmor:oro-config-common:3.1.0'
+	modImplementation("com.gitlab.Lortseam:completeconfig:1.0.0")
 }
 
 processResources {

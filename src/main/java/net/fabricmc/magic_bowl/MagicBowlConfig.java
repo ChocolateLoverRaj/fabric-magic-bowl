@@ -1,21 +1,19 @@
 package net.fabricmc.magic_bowl;
 
-import com.oroarmor.config.Config;
-import com.oroarmor.config.ConfigItemGroup;
+import me.lortseam.completeconfig.api.ConfigContainer;
+import me.lortseam.completeconfig.api.ConfigEntries;
+import me.lortseam.completeconfig.api.ConfigGroup;
+import me.lortseam.completeconfig.data.Config;
 
-import net.fabricmc.loader.api.FabricLoader;
+public final class MagicBowlConfig extends Config implements ConfigContainer {
 
-import java.io.File;
+  MagicBowlConfig() {
+    super(MagicBowlMod.MOD_NAME);
+  }
 
-import com.oroarmor.config.BooleanConfigItem;
-import static com.google.common.collect.ImmutableList.of;
-
-public class MagicBowlConfig extends Config {
-  public static final String FOOD_ONLY = "food_only";
-
-  public MagicBowlConfig() {
-    super(of(new ConfigItemGroup(of(new BooleanConfigItem(FOOD_ONLY, true, FOOD_ONLY)), MagicBowlMod.MOD_NAME)),
-        new File(FabricLoader.getInstance().getConfigDir().toFile(), MagicBowlMod.MOD_NAME + ".json"),
-        MagicBowlMod.MOD_NAME);
+  @Transitive
+  @ConfigEntries
+  public static class Config implements ConfigGroup {
+    public static boolean foodOnly = true;
   }
 }

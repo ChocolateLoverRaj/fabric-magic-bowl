@@ -21,6 +21,9 @@
     ],
     "client": [
       "net.fabricmc.magic_bowl.MagicBowlModClient"
+    ],
+    "modmenu": [
+      "net.fabricmc.magic_bowl.ModMenuIntegration"
     ]
   },
   "depends": {

@@ -23,18 +23,24 @@ Once loaded with an item, right click on the magic bowl to take the item. It wil
 If you want to change what item is in the bowl, you need to wash it. Wash it by right clicking it while looking at water.
 
 ## Installing
-Download the mod from the releases.
+### Magic Bowl Mod
+Download the mod from the releases
+
+### Required Libraries
+- Download completeconfig from https://jitpack.io/com/gitlab/Lortseam/completeconfig/1.0.0/completeconfig-1.0.0.jar
+- Download [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
+
+### Optional Libraries
+- To use gui for [configuring](#configuring), download [ModMenu](https://github.com/TerraformersMC/ModMenu)
 
 ## Configuring
-You can edit `config/magic_bowl.json` in your Minecraft folder.
+You can edit `config/magic_bowl.conf` in your Minecraft folder. If you are in Single Player, you can use [ModMenu](https://github.com/TerraformersMC/ModMenu) and configure the mod from the mods screen.
 
-```json
-{
-  "magic_bowl": {
-    "food_only": true
-  }
+```conf
+config {
+    foodOnly=false
 }
 ```
 
-### `food_only`
+### `foodOnly`
 Setting to true disallows putting non food items into the bowl.
