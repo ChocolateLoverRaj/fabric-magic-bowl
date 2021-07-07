@@ -1,15 +1,16 @@
 {
   "schemaVersion": 1,
   "id": "magic_bowl",
-  "version": "1.1.0",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "version": "${version}",
+  "name": "Magic Bowl",
+  "description": "A magical bowl that has infinite amounts of food",
   "authors": [
-    "Me!"
+    "Rajas Paranjpe"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/ChocolateLoverRaj/fabric-magic-bowl#README",
+    "sources": "https://github.com/ChocolateLoverRaj/fabric-magic-bowl",
+    "issues": "https://github.com/ChocolateLoverRaj/fabric-magic-bowl/issues"
   },
   "license": "CC0-1.0",
   "icon": "assets/magic_bowl/icon.png",

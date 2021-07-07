@@ -4,8 +4,14 @@
     "Drainable",
     "HOTBAR",
     "Minecraft",
+    "Paranjpe",
+    "fabricmc",
+    "modmenu",
     "raycast"
   ],
-  "java.configuration.updateBuildConfiguration": "interactive",
-  "cSpell.language": "en,es"
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "cSpell.language": "en,es",
+  "java.project.referencedLibraries": [
+    "libs/**/*.jar"
+  ]
 }

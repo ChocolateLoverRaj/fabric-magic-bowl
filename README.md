@@ -24,3 +24,17 @@ If you want to change what item is in the bowl, you need to wash it. Wash it by 
 
 ## Installing
 Download the mod from the releases.
+
+## Configuring
+You can edit `config/magic_bowl.json` in your Minecraft folder.
+
+```json
+{
+  "magic_bowl": {
+    "food_only": true
+  }
+}
+```
+
+### `food_only`
+Setting to true disallows putting non food items into the bowl.

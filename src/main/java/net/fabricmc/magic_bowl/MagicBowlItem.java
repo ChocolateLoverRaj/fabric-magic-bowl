@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.inventory.StackReference;
+import net.minecraft.item.AirBlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -84,26 +86,19 @@ public class MagicBowlItem extends Item {
 
   @Override
   public boolean onStackClicked(ItemStack stack, Slot slot, ClickType clickType, PlayerEntity player) {
-    if (slot.id == 0 && moving)
+    if (slot.id == 0 && moving) {
+      System.out.println("hi");
       return true;
+    }
     return super.onStackClicked(stack, slot, clickType, player);
   }
 
-  public void onClose(ItemStack containerStack, boolean isClient, ItemStack bowlStack, PlayerEntity player) {
+  public static void onClose(boolean isClient) {
     bowlScreenOpen.set(isClient, false);
-    if (!containerStack.isEmpty()) {
-      setContains(bowlStack, Item.getRawId(containerStack.getItem()));
-      startCooldown(player);
-    }
-
   }
 
   private void startCooldown(PlayerEntity player) {
     player.getItemCooldownManager().set(this, COOLDOWN_TICKS);
-  }
-
-  private void setContains(ItemStack stack, int id) {
-    stack.getOrCreateTag().putInt(CONTAINS_TAG_KEY, id);
   }
 
   private int getContains(ItemStack stack) {
@@ -136,5 +131,24 @@ public class MagicBowlItem extends Item {
   private void playTakeSound(World world, PlayerEntity user) {
     world.playSound((PlayerEntity) null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ITEM_PICKUP,
         SoundCategory.NEUTRAL, 0.5F, 1);
+  }
+
+  public static ItemStack containing(ItemStack containsStack) {
+    Item containsItem = containsStack.getItem();
+    if (!(containsItem instanceof AirBlockItem)) {
+      ItemStack itemStack = MagicBowlMod.MAGIC_BOWL.getDefaultStack();
+      NbtCompound nbtCompound = new NbtCompound();
+      nbtCompound.putInt(CONTAINS_TAG_KEY, Item.getRawId(containsItem));
+      itemStack.setTag(nbtCompound);
+      return itemStack;
+    }
+    return ItemStack.EMPTY;
+  }
+
+  public static boolean containsItem(ItemStack stack) {
+    NbtCompound nbtCompound = stack.getTag();
+    if (nbtCompound == null)
+      return false;
+    return nbtCompound.contains(CONTAINS_TAG_KEY);
   }
 }
