@@ -39,9 +39,13 @@ You can edit `config/magic_bowl.conf` in your Minecraft folder. If you are in Si
 
 ```conf
 config {
-    foodOnly=false
+    cooldown=600
+    foodOnly=true
 }
 ```
+
+### `cooldown`
+Number of ticks until the magic bowl can be used again.
 
 ### `foodOnly`
 Setting to true disallows putting non food items into the bowl.
