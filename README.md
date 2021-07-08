@@ -45,9 +45,13 @@ config {
         "minecraft:enchanted_golden_apple",
         "minecraft:golden_apple"
     ]
+    cooldown=600
     foodOnly=true
 }
 ```
+
+### `cooldown`
+Number of ticks until the magic bowl can be used again.
 
 ### `foodOnly`
 Setting to true disallows putting non food items into the bowl.

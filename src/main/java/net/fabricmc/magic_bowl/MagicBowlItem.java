@@ -27,7 +27,6 @@ public class MagicBowlItem extends Item {
   public static final int NON_HOTBAR_SLOT = 9;
   public static final int INVENTORY_SLOTS = 27;
   public static final String CONTAINS_TAG_KEY = "contains";
-  public static final int COOLDOWN_TICKS = 60;
   public static final int CONTAINS_NOTHING = -1;
   public static final boolean HAS_GLINT = true;
   private static ServerClient<Boolean> bowlScreenOpen = new ServerClient<Boolean>(false);
@@ -98,7 +97,7 @@ public class MagicBowlItem extends Item {
   }
 
   private void startCooldown(PlayerEntity player) {
-    player.getItemCooldownManager().set(this, COOLDOWN_TICKS);
+    player.getItemCooldownManager().set(this, MagicBowlConfig.Config.cooldown);
   }
 
   private int getContains(ItemStack stack) {
