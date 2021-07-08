@@ -32,6 +32,7 @@ Download the mod from the releases
 
 ### Optional Libraries
 - To use gui for [configuring](#configuring), download [ModMenu](https://github.com/TerraformersMC/ModMenu)
+- If you use ModMenu, then you'll also need to download [Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)
 
 ## Configuring
 You can edit `config/magic_bowl.conf` in your Minecraft folder. If you are in Single Player, you can use [ModMenu](https://github.com/TerraformersMC/ModMenu) and configure the mod from the mods screen.
