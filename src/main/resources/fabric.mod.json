@@ -19,6 +19,9 @@
     "main": [
       "net.fabricmc.magic_bowl.MagicBowlMod"
     ],
+    "server": [
+      "net.fabricmc.magic_bowl.MagicBowlModServer"
+    ],
     "client": [
       "net.fabricmc.magic_bowl.MagicBowlModClient"
     ],

@@ -31,3 +31,5 @@ bin/
 # fabric
 
 run/
+run_server/
+run_client/

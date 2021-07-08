@@ -11,6 +11,7 @@ public class MagicBowlMod implements ModInitializer {
 	public static final String MOD_NAME = "magic_bowl";
 	public static final Item MAGIC_BOWL = new MagicBowlItem();
 	public static final MagicBowlConfig CONFIG = new MagicBowlConfig();
+	public static final Identifier CONFIG_PACKET_ID = new Identifier(MOD_NAME, "config");
 
 	public static final ScreenHandlerType<MagicBowlScreenHandler> MAGIC_BOWL_SCREEN_HANDLER;
 
@@ -24,7 +25,7 @@ public class MagicBowlMod implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		CONFIG.load();
+		MagicBowlMod.CONFIG.load();
 		Registry.register(Registry.ITEM, new Identifier(MOD_NAME, "magic_bowl"), MAGIC_BOWL);
 	}
 }
