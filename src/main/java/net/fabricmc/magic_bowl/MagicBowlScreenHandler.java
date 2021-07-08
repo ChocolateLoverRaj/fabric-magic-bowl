@@ -280,7 +280,8 @@ public class MagicBowlScreenHandler extends ScreenHandler {
       return addSlotEmpty;
     else
       return bowlStack.getItem() instanceof MagicBowlItem && !MagicBowlItem.containsItem(bowlStack) && !addSlotEmpty
-          && (!MagicBowlConfig.Config.foodOnly || addStack.isFood());
+          && (!MagicBowlConfig.Config.foodOnly || addStack.isFood())
+          && !MagicBowlConfig.Config.bannedItems.contains(addStack.getItem());
   }
 
   public boolean canCombine() {
@@ -308,6 +309,8 @@ public class MagicBowlScreenHandler extends ScreenHandler {
     ItemStack addStack = slots.get(1).getStack();
     if (MagicBowlConfig.Config.foodOnly && !addStack.isEmpty() && !addStack.isFood())
       return new TranslatableText(errorsId + "food_only");
+    if (!addStack.isEmpty() && MagicBowlConfig.Config.bannedItems.contains(addStack.getItem()))
+      return new TranslatableText(errorsId + "item_banned");
     return null;
   }
 }

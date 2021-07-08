@@ -24,6 +24,9 @@
     ],
     "modmenu": [
       "net.fabricmc.magic_bowl.ModMenuIntegration"
+    ],
+    "completeconfig-extension": [
+      "net.fabricmc.magic_bowl.CompleteConfigExtensionItem"
     ]
   },
   "depends": {

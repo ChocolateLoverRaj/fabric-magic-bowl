@@ -35,13 +35,22 @@ Download the mod from the releases
 - If you use ModMenu, then you'll also need to download [Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)
 
 ## Configuring
+> **Important** - The GUI for `bannedItems` currently is broken, and trying to edit it with the GUI crashes the game. For you, you can edit the config file manually to configure banned items.
+
 You can edit `config/magic_bowl.conf` in your Minecraft folder. If you are in Single Player, you can use [ModMenu](https://github.com/TerraformersMC/ModMenu) and configure the mod from the mods screen.
 
 ```conf
 config {
-    foodOnly=false
+    bannedItems=[
+        "minecraft:enchanted_golden_apple",
+        "minecraft:golden_apple"
+    ]
+    foodOnly=true
 }
 ```
 
 ### `foodOnly`
 Setting to true disallows putting non food items into the bowl.
+
+### `bannedItems`
+A list of items that cannot be added to the bowl. If you consider an item too OP, you can add it to this list.

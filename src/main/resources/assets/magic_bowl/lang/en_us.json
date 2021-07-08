@@ -2,7 +2,9 @@
   "item.magic_bowl.magic_bowl": "Magic Bowl",
   "item.magic_bowl.magic_bowl.contains": "%d in a %d",
   "config.magic_bowl.config.foodOnly": "Food only",
+  "config.magic_bowl.config.bannedItems": "Banned items",
   "custom.magic_bowl.screens.magic_bowl.errors.bowl_already_filled": "Bowl already filled",
   "custom.magic_bowl.screens.magic_bowl.errors.base_must_be_a_magic_bowl": "Base must be a %d",
-  "custom.magic_bowl.screens.magic_bowl.errors.food_only": "Only food can be put in the bowl"
+  "custom.magic_bowl.screens.magic_bowl.errors.food_only": "Only food can be put in the bowl",
+  "custom.magic_bowl.screens.magic_bowl.errors.item_banned": "That item is banned"
 }
