@@ -1,3 +1,6 @@
+> [!WARNING]
+> I no longer use or maintain this mod. Contact me (you can email me) if you want me to put a link to a maintained alternative here.
+
 # Fabric Magic Bowl
 Get infinite amounts of items with the magic bowl.
 
